@@ -4,13 +4,13 @@ require("mason-lspconfig").setup()
 -- Automatically attach installed language servers.
 local lspconfig = require('lspconfig')
 require('mason-lspconfig').setup_handlers({
-  function(server_name)
-	local capabilities = require('cmp_nvim_lsp').default_capabilities();
-    lspconfig[server_name].setup({
-      on_attach = lsp_attach,
-      capabilities = capabilities,
-    })
-  end,
+	function(server_name)
+		local capabilities = require('cmp_nvim_lsp').default_capabilities();
+		lspconfig[server_name].setup({
+			on_attach = lsp_attach,
+			capabilities = capabilities,
+		})
+	end,
 })
 
 vim.keymap.set('n', 'ge', vim.diagnostic.open_float)
