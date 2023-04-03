@@ -6,7 +6,7 @@ vim.opt.sw = 4
 vim.g.mapleader = " "
 
 vim.api.nvim_create_autocmd("FileType", {
-	command = "setlocal ts=2 sts=2 sw=2 exptandtab",
+	command = "setlocal ts=2 sts=2 sw=2 expandtab",
 	pattern = { "yaml", "markdown" },
 })
 
