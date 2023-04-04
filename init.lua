@@ -16,9 +16,12 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 vim.api.nvim_set_keymap("t", "<Esc>", '<C-\\><C-n>', { noremap = true }) -- Set <Esc> as shortcut to exit insert mode in terminal
-vim.api.nvim_set_keymap('n', '<leader>td', '<Cmd>below split | resize 10 | terminal<CR>a', { noremap = true }) -- open small terminal in below split
+vim.api.nvim_set_keymap('n', '<leader>tb', '<Cmd>below split | resize 10 | terminal<CR>a', { noremap = true }) -- open small terminal in below split
 
 
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 
+function setShellExec(command)
+	vim.api.nvim_set_keymap('n', '<leader>se', string.format('<Cmd>!%s<CR>', command), { noremap = true }) -- open small terminal in below split
+end
