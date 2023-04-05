@@ -22,6 +22,3 @@ vim.api.nvim_set_keymap('n', '<leader>tb', '<Cmd>below split | resize 10 | termi
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 
-function setShellExec(command)
-	vim.api.nvim_set_keymap('n', '<leader>se', string.format('<Cmd>!%s<CR>', command), { noremap = true }) -- open small terminal in below split
-end

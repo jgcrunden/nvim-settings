@@ -17,6 +17,8 @@ packer.startup(function(use)
 
 	use { "nvim-treesitter/nvim-treesitter" }
 
+	use { "theprimeagen/harpoon" }
+
 	use { "ellisonleao/gruvbox.nvim" }
 
 	-- LSP
