@@ -12,6 +12,11 @@ vim.keymap.set("n", "<leader>f2", function() ui.nav_file(2) end)
 vim.keymap.set("n", "<leader>f3", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<leader>f4", function() ui.nav_file(4) end)
 
+vim.keymap.set("n", "<leader>tt", function()
+	term.gotoTerminal(1)
+	vim.api.nvim_input("a")
+end)
+
 vim.keymap.set("n", "<leader>t1", function()
 	term.sendCommand(1, 1)
 	term.gotoTerminal(1)
