@@ -7,7 +7,7 @@ vim.g.mapleader = " "
 
 vim.api.nvim_create_autocmd("FileType", {
 	command = "setlocal ts=2 sts=2 sw=2 expandtab",
-	pattern = { "yaml", "markdown" },
+	pattern = { "yaml", "markdown", "xml" },
 })
 
 vim.api.nvim_create_autocmd("TermOpen", {
@@ -22,3 +22,4 @@ vim.api.nvim_set_keymap('n', '<leader>tb', '<Cmd>below split | resize 10 | termi
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 
+vim.opt.mouse = ""
