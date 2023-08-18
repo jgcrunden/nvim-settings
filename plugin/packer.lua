@@ -22,14 +22,14 @@ packer.startup(function(use)
 	use { "ellisonleao/gruvbox.nvim" }
 
 	-- LSP
-	use { 
+	use {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig",
 		"neovim/nvim-lspconfig"
 	}
 
 	-- Autocompletion
-	use { 
+	use {
 		'hrsh7th/nvim-cmp',
 		'hrsh7th/cmp-nvim-lsp',
 	}
