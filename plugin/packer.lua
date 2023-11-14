@@ -18,13 +18,14 @@ packer.startup(function(use)
 
 	use { "theprimeagen/harpoon" }
 
-	use { "ellisonleao/gruvbox.nvim" }
+	use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- LSP
 	use {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig",
-		"neovim/nvim-lspconfig"
+		"neovim/nvim-lspconfig",
+		"simrat39/rust-tools.nvim"
 	}
 
 	-- Autocompletion

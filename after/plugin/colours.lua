@@ -1,3 +1,4 @@
-require("gruvbox").setup({ transparent_mode = true })
-vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+require("catppuccin").setup({
+	transparent_background = true
+})
+vim.cmd.colorscheme "catppuccin"
