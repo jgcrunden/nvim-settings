@@ -56,4 +56,5 @@ packer.startup(function(use)
 	use { "mfussenegger/nvim-jdtls" }
 
 	use { "lewis6991/gitsigns.nvim" }
+	 use { "folke/trouble.nvim" }
 end)
