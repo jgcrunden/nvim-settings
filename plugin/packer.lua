@@ -3,15 +3,23 @@ packer.startup(function(use)
 	--[[ If shallow clone is not permitted
 	packer.config.git.depth = nil
 	packer.config.git.subcommands.install = "clone"
-	]]--
+	]]
+	--
 
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons', -- optional
+		},
+	}
+
 	-- Fuzzy finder
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 
 	use { "nvim-treesitter/nvim-treesitter" }
