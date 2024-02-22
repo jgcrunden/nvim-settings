@@ -3,8 +3,7 @@ packer.startup(function(use)
 	--[[ If shallow clone is not permitted
 	packer.config.git.depth = nil
 	packer.config.git.subcommands.install = "clone"
-	]]
-	--
+	]]--
 
 	-- Packer can manage itself
 	use { 'wbthomason/packer.nvim' }
@@ -49,7 +48,6 @@ packer.startup(function(use)
 		'saadparwaiz1/cmp_luasnip',
 		'rafamadriz/friendly-snippets'
 	}
-
 
 	-- Git integration
 	use { "lewis6991/gitsigns.nvim" }
