@@ -40,4 +40,3 @@ vim.keymap.set("n", "<leader>t4", function()
 	term.gotoTerminal(1)
 	vim.api.nvim_input("a<CR>")
 end)
-

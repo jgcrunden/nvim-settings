@@ -1,6 +1,5 @@
---local luasnip = require'luasnip'
 -- Set up nvim-cmp.
-local cmp = require'cmp'
+local cmp = require('cmp')
 
 require("luasnip.loaders.from_vscode").lazy_load()
 cmp.setup({
@@ -27,5 +26,3 @@ cmp.setup({
 		{ name = 'buffer' },
 	})
 })
-
-
