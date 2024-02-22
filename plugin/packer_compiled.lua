@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/joshua/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["guess-indent.nvim"] = {
+    loaded = true,
+    path = "/home/joshua/.local/share/nvim/site/pack/packer/start/guess-indent.nvim",
+    url = "https://github.com/nmac427/guess-indent.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/joshua/.local/share/nvim/site/pack/packer/start/harpoon",

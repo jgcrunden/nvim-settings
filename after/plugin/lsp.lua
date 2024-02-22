@@ -13,19 +13,17 @@ rt.setup({
 	},
 })
 
--- Automatically attach installed language servers.
-local lspconfig = require('lspconfig')
-require('mason-lspconfig').setup_handlers({
-	function(server_name)
-		if server_name ~= "jdtls" then
-			local capabilities = require('cmp_nvim_lsp').default_capabilities();
-			lspconfig[server_name].setup({
-				on_attach = lsp_attach,
-				capabilities = capabilities,
-			})
-		end
-	end,
-})
+-- Suppress lua warnings when editing nvim config files
+require 'lspconfig'.lua_ls.setup {
+	settings = {
+		Lua = {
+			diagnostics = {
+				-- Get the language server to recognize the `vim` global
+				globals = { 'vim' },
+			},
+		},
+	},
+}
 
 vim.keymap.set('n', 'ge', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
