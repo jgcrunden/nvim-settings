@@ -63,7 +63,7 @@ Page through the errors with `q` until they are cleared. Then run Packer's sync 
 ```
 (don't forget the preceding semicolon)
 
-After PackerSync has completed, close the Packer window with `q`. Quit Neovim with `:q` and reopen. This time it should be clear of errorss, and all plugins should be installed and running successfully. Prompts in the bottom left should indicate that nvim-treesitter is downloading parsers for some languages.
+After PackerSync has completed, close the Packer window with `q`. Quit Neovim with `:q` and reopen. This time it should be clear of errors, and all plugins should be installed and running successfully. Prompts in the bottom left should indicate that nvim-treesitter is downloading parsers for some languages.
 
 ## Installing LSPs
 LSPs (Language Servers) can be installed with the following steps.
