@@ -12,7 +12,7 @@ sudo dnf install epel-release -y
 ```bash
 sudo dnf install gcc git ripgrep curl wget unzip -y
 ```
-(ripgrep is require for fuzzy-finding functionality in the [Telescope plugin](https://github.com/nvim-telescope/telescope.nvim)
+(ripgrep is required for fuzzy-finding functionality in the [Telescope plugin](https://github.com/nvim-telescope/telescope.nvim)
 
 ### Install Neovim
 #### With DNF
