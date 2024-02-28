@@ -40,7 +40,7 @@ packer.startup(function(use)
 	-- Syntax highlighting
 	use { "nvim-treesitter/nvim-treesitter" }
 
-	use { "nmac427/guess-indent.nvim" }
+	use { "NMAC427/guess-indent.nvim" }
 
 	-- Autocompletion
 	use {

@@ -1,4 +1,11 @@
 require("mason").setup()
+--[[ If provider is not available, a hardcoded one can be specified
+require("mason").setup({
+    registries = {
+        "github:mason-org/mason-registry@2023-04-30-delightful-potato"
+    }
+})
+]]--
 require("mason-lspconfig").setup()
 local rt = require("rust-tools")
 
