@@ -1,6 +1,6 @@
 local packer = require('packer')
 packer.startup(function(use)
-	--[[ If shallow clone is not permitted
+	--[[ If shallow clone is not permitted (i.e. when using a GitHub proxy)
 	packer.config.git.depth = nil
 	packer.config.git.subcommands.install = "clone"
 	]]--

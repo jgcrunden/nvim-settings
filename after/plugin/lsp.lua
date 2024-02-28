@@ -1,5 +1,5 @@
 require("mason").setup()
---[[ If provider is not available, a hardcoded one can be specified
+--[[ If provider is not available (i.e. when using a GitHub proxy), a hardcoded one can be specified
 require("mason").setup({
     registries = {
         "github:mason-org/mason-registry@2023-04-30-delightful-potato"

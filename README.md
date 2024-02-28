@@ -73,3 +73,10 @@ LSPs (Language Servers) can be installed with the following steps.
 
 ## Plugins
 I have included minimal configuration for the various plugins I've used. Please consult the README.mds in the GitHub repos for a given plugin to see how it can be used and configured.
+
+## Icons
+Telescope and Nvim-Tree (the file explorer) use icons for filetypes. You may want to download and install a font that contains compatible glyphs so these plugins can render them correctly. Such fonts can be downloaded from [Nerd Fonts](https://www.nerdfonts.com/)
+- Download a font from the [downloads](https://www.nerdfonts.com/font-downloads) page.
+- Extract the zip
+- Double click on the font files and click the "Install" button in the programme your OS opens them in
+- Open the settings for your terminal emulator. The font you've installed should now appear in list of available fonts
