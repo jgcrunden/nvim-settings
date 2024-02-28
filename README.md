@@ -10,7 +10,7 @@ sudo dnf install epel-release -y
 
 ### Install dependencies
 ```bash
-sudo dnf install gcc git ripgrep curl wget -y
+sudo dnf install gcc git ripgrep curl wget unzip -y
 ```
 (ripgrep is require for fuzzy-finding functionality in the [Telescope plugin](https://github.com/nvim-telescope/telescope.nvim)
 
