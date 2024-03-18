@@ -47,7 +47,7 @@ git clone https://github.com/jgcrunden/nvim-settings ~/.config/nvim
 N.B. Packer (the Neovim plugin manager), Mason (a plugin that acts as an LSP installer) and nvim-treesitter (the plugin that installs parsers that give better syntax highlighting), all require tweaking to work with a GitHub proxy. You may need to uncomment lua config in the follow files to get it working with a proxy:
 - [packer.lua](plugin/packer.lua)
 - [lsp.lua](after/plugin/lsp.lua)
-- [lsp.lua](after/plugin/treesitter.lua)
+- [treesitter.lua](after/plugin/treesitter.lua)
 
 
 ## Starting Neovim
