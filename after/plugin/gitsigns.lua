@@ -1,4 +1,5 @@
 require('gitsigns').setup({
+	attach_to_untracked = true,
 	on_attach = function()
 		local gs = package.loaded.gitsigns
 		vim.keymap.set('n', '<leader>h[', gs.prev_hunk)
