@@ -10,7 +10,9 @@ require("nvim-tree").setup({
 		sorter = "case_sensitive",
 	},
 	view = {
-		width = 30,
+		width = function()
+			return math.floor(vim.opt.columns:get())
+		end
 	},
 	renderer = {
 		group_empty = true,
@@ -48,6 +50,11 @@ require("nvim-tree").setup({
 	filters = {
 		dotfiles = true,
 	},
+	actions = {
+		open_file = {
+			quit_on_open = true,
+		}
+	}
 })
 
 vim.api.nvim_set_keymap('n', '<leader>pv', '<cmd>NvimTreeToggle<CR>', { noremap = true })

@@ -34,7 +34,12 @@ packer.startup(function(use)
 		"williamboman/mason-lspconfig",
 		"neovim/nvim-lspconfig",
 		"simrat39/rust-tools.nvim",
-		"mfussenegger/nvim-jdtls"
+		"mfussenegger/nvim-jdtls",
+		"akinsho/flutter-tools.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim", -- optional for vim.ui.select
+		},
 	}
 
 	-- Syntax highlighting
