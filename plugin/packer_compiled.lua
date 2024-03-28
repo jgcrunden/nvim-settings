@@ -188,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/joshua/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/joshua/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 

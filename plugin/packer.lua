@@ -23,7 +23,10 @@ packer.startup(function(use)
 	}
 
 	-- Pinning files and commands
-	use { "theprimeagen/harpoon" }
+	use {
+		"theprimeagen/harpoon",
+		branch = "harpoon2"
+	}
 
 	-- Colour scheme
 	use { "catppuccin/nvim", as = "catppuccin" }
@@ -67,4 +70,6 @@ packer.startup(function(use)
 
 	-- Pretty Diagnostics
 	use { "folke/trouble.nvim" }
+
+	use { "christoomey/vim-tmux-navigator" }
 end)
