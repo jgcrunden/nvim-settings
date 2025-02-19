@@ -6,7 +6,7 @@ vim.opt.sw = 4
 vim.opt.sts = 4
 vim.api.nvim_create_autocmd("FileType", {
 	command = "setlocal ts=2 sts=2 sw=2 expandtab",
-	pattern = { "yaml", "markdown", "xml", "css" },
+	pattern = { "dart", "yaml", "markdown", "xml", "css" },
 })
 
 vim.g.mapleader = " "
