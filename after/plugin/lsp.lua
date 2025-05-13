@@ -9,7 +9,7 @@ require("mason").setup({
 require("mason-lspconfig").setup()
 local rt = require("rust-tools")
 
-require("mason-lspconfig").setup_handlers {
+require("mason-lspconfig").setup {
 	-- The first entry (without a key) will be the default handler
 	-- and will be called for each installed server that doesn't have
 	-- a dedicated handler.

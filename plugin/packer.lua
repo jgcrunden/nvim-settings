@@ -33,8 +33,8 @@ packer.startup(function(use)
 
 	-- LSP
 	use {
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig",
+		"mason-org/mason.nvim",
+		"mason-org/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 		"simrat39/rust-tools.nvim",
 		"mfussenegger/nvim-jdtls",
