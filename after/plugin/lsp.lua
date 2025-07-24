@@ -51,8 +51,6 @@ require("flutter-tools").setup {} -- use defaults
 vim.keymap.set('n', 'ge', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
---vim.keymap.set('n', 'gl', vim.diagnostic.setloclist)
---vim.keymap.set('n', 'gL', vim.diagnostic.setqflist)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
