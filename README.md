@@ -10,7 +10,7 @@ sudo dnf install epel-release -y
 
 ### Install dependencies
 ```bash
-sudo dnf install gcc git ripgrep curl wget unzip -y
+sudo dnf install gcc git luarocks ripgrep curl wget unzip -y
 ```
 (ripgrep is required for fuzzy-finding functionality in the [Telescope plugin](https://github.com/nvim-telescope/telescope.nvim)
 
@@ -33,19 +33,11 @@ Then add the binary to the path variable by adding the following to your `~/.bas
 export PATH="$PATH:/opt/nvim-linux64/bin"
 ```
 
-### Install Packer (Neovim package manager)
-As per the guide from the [Packer repo](https://github.com/wbthomason/packer.nvim) clone Packer using the follow command to install it:
-```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-Omitting `--depth 1` may be required when working with a GitHub proxy.
-
 ### Install this configuration
 ```bash
 git clone https://github.com/jgcrunden/nvim-settings ~/.config/nvim
 ```
 N.B. Packer (the Neovim plugin manager), Mason (a plugin that acts as an LSP installer) and nvim-treesitter (the plugin that installs parsers that give better syntax highlighting), all require tweaking to work with a GitHub proxy. You may need to uncomment lua config in the follow files to get it working with a proxy:
-- [packer.lua](plugin/packer.lua)
 - [lsp.lua](after/plugin/lsp.lua)
 - [treesitter.lua](after/plugin/treesitter.lua)
 
@@ -57,13 +49,11 @@ After following the guide above, you can start Neovim with the following command
 nvim
 ```
 
-Page through the errors with `q` until they are cleared. Then run Packer's sync command to install all the plugins by running:
-```vim
-:PackerSync
+## Updating Plugins
+Plugins are managed by [lazy.nvim](https://github.com/folke/lazy.nvim). Please consult the documentation for working with Lazy. Run the following to open the plugin manager.
 ```
-(don't forget the preceding semicolon)
-
-After PackerSync has completed, close the Packer window with `q`. Quit Neovim with `:q` and reopen. This time it should be clear of errors, and all plugins should be installed and running successfully. Prompts in the bottom left should indicate that nvim-treesitter is downloading parsers for some languages.
+:Lazy
+```
 
 ## Installing LSPs
 LSPs (Language Servers) can be installed with the following steps.

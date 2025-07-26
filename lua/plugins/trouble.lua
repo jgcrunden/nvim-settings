@@ -66,9 +66,7 @@ return {
 				"gR",
 				"<cmd>Trouble lsp toggle focus=false win.position=right<cr>"
 			}
-
 		}
-
 	},
 	{
 		"folke/todo-comments.nvim",

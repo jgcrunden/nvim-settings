@@ -6,7 +6,6 @@ return {
 			"mfussenegger/nvim-jdtls"
 		},
 
-		-- example using `opts` for defining servers
 		opts = {
 			servers = {
 				lua_ls = {}

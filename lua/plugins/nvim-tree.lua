@@ -1,4 +1,3 @@
--- disable netrw at the very start of your init.lua
 return {
 	"nvim-tree/nvim-tree.lua",
 	dependencies = {"nvim-tree/nvim-web-devicons" },
@@ -54,9 +53,9 @@ return {
 		}
 	},
 	init = function()
+		-- disable netrw at the very start of your init.lua
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
-
 		-- set termguicolors to enable highlight groups
 		vim.opt.termguicolors = true
 
@@ -65,6 +64,4 @@ return {
 		vim.api.nvim_set_keymap('n', '<leader>pf', '<cmd>NvimTreeFindFile<CR>', { noremap = true })
 		vim.api.nvim_set_keymap('n', '<leader>pc', '<cmd>NvimTreeCollapse<CR>', { noremap = true })
 	end
-
-
 }
