@@ -37,17 +37,9 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 ```bash
 git clone https://github.com/jgcrunden/nvim-settings ~/.config/nvim
 ```
-N.B. Packer (the Neovim plugin manager), Mason (a plugin that acts as an LSP installer) and nvim-treesitter (the plugin that installs parsers that give better syntax highlighting), all require tweaking to work with a GitHub proxy. You may need to uncomment lua config in the follow files to get it working with a proxy:
+N.B. Lazy (the Neovim plugin manager), Mason (a plugin that acts as an LSP installer) and nvim-treesitter (the plugin that installs parsers that give better syntax highlighting), all require tweaking to work with a GitHub proxy. You may need to uncomment lua config in the follow files to get it working with a proxy:
 - [lsp.lua](after/plugin/lsp.lua)
 - [treesitter.lua](after/plugin/treesitter.lua)
-
-
-## Starting Neovim
-After following the guide above, you can start Neovim with the following command:
-**Important: Opening for the first time will produce errors. This is because Packer cannot find the plugins from the config**
-```bash
-nvim
-```
 
 ## Updating Plugins
 Plugins are managed by [lazy.nvim](https://github.com/folke/lazy.nvim). Please consult the documentation for working with Lazy. Run the following to open the plugin manager.
