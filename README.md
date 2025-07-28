@@ -38,8 +38,8 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 git clone https://github.com/jgcrunden/nvim-settings ~/.config/nvim
 ```
 N.B. Lazy (the Neovim plugin manager), Mason (a plugin that acts as an LSP installer) and nvim-treesitter (the plugin that installs parsers that give better syntax highlighting), all require tweaking to work with a GitHub proxy. You may need to uncomment lua config in the follow files to get it working with a proxy:
-- [lsp.lua](after/plugin/lsp.lua)
-- [treesitter.lua](after/plugin/treesitter.lua)
+- [lsp.lua](lua/plugins/lsp.lua)
+- [treesitter.lua](lua/plugins/treesitter.lua)
 
 ## Updating Plugins
 Plugins are managed by [lazy.nvim](https://github.com/folke/lazy.nvim). Please consult the documentation for working with Lazy. Run the following to open the plugin manager.
