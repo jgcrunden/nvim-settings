@@ -16,4 +16,6 @@ vim.api.nvim_set_keymap('n', '<leader>tb', '<Cmd>below split | resize 10 | termi
 
 vim.opt.mouse = ""                                                                                                             -- Disable mouse
 
+vim.opt.exrc = true
+
 require("config.lazy")
