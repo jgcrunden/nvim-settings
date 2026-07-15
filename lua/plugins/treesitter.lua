@@ -1,17 +1,26 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	branch = 'master',
-	lazy = false,
-	build = ":TSUpdate",
-	opts = function()
-		-- require("nvim-treesitter.install").prefer_git = true -- If installing with wget is not possible, (i.e. when working with a GitHub proxy)
-		require'nvim-treesitter.configs'.setup {
-			ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
-			auto_install = true,
-			highlight = {
-				enable = true,
-				additional_vim_regex_highlighting = false,
-			}
-		}
-	end
+    "nvim-treesitter/nvim-treesitter",
+    branch = "main", -- Switch from 'master' to 'main'
+    lazy = false,
+    build = ":TSUpdate",
+    config = function()
+        -- 1. Initialize the new top-level module (configs.setup is deprecated)
+        require("nvim-treesitter").setup()
+
+        local ensure_installed = { "c", "lua", "vim", "vimdoc", "query" }
+        local installed = require("nvim-treesitter.config").get_installed()
+        local to_install = vim.tbl_filter(function(parser)
+            return not vim.tbl_contains(installed, parser)
+        end, ensure_installed)
+
+        if #to_install > 0 then
+            require("nvim-treesitter").install(to_install)
+        end
+
+        vim.api.nvim_create_autocmd("FileType", {
+            callback = function()
+                pcall(vim.treesitter.start)
+            end,
+        })
+    end,
 }
